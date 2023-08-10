@@ -17,5 +17,12 @@ jobs:
           node-version: '16.14.2'
 
       - name: Depend install and serve
+        env:
+          COOKIE: ${{ secrets.COOKIE }}
+          EMAIL: ${{ secrets.EMAIL }}
+          AUTHORIZATION_CODE: ${{ secrets.AUTHORIZATION_CODE }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          DINGDING_WEBHOOK: ${{ secrets.DINGDING_WEBHOOK }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
         run: |
-           node ./rank.js
+          node rank.js
