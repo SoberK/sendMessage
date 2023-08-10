@@ -37,7 +37,7 @@ try {
   try {
     console.log(response.d[0].courses[0].vote_count);
     console.log(response.d[0].courses[1].vote_count );
-    if(+response.d[0].courses[0].vote_count - +response.d[0].courses[1].vote_count > 600){
+    if(+response.d[0].courses[0].vote_count - +response.d[0].courses[1].vote_count <= 600){
       send('616559837@qq.com',`${response.d[0].courses[0].vote_count - response.d[0].courses[1].vote_count }`)
       send('mengying.liu@bkchina.cn',`${response.d[0].courses[0].vote_count - response.d[0].courses[1].vote_count }` )
       send('18552561993@163.com' ,`${response.d[0].courses[0].vote_count - response.d[0].courses[1].vote_count }`)
